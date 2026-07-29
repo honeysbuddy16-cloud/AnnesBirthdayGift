@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anne's Birthday Gift 💝</title>
+
+    <link rel="icon" type="image/png" href="images/tulips-isolated-on-transparent-background-png.webp">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color:#FFD9DB">
+
+    <!-- Welcome Page -->
+    <div id="welcomePage">
+
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif">🎂🎉</h1>
+        <h1 style="font-family:Arial, Helvetica, sans-serif;
+       color:#6B0037">Hi, Anne! 💗</h1>
+        <b>
+            <p style="font-family:'Courier New', Courier, monospace;
+        color:#6B0037">
+                It's your birthday today, so here's a fun little digital gift for you 
+                <br> to celebrate since we can't see you in person. <br>Made by Flor, from Flor
+            </p>
+        </b>
+
+        <button id="continueButton" style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">
+            Continue... 👀
+        </button>
+        <img id="cake-bolo.gif" src="images/cake-bolo.gif" alt="Birthday surprise" style="height:170px;width:150px;">
+
+    </div>
+
+    <!-- Drawing Page -->
+    <div id="drawingPage">
+
+        <img id="coiucuaem.gif" src="images/coiucuaem.gif" alt="Birthday surprise" style="height:170px;width:200px;">
+        <b>
+        <p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037;font-size:large">
+            Draw your best flower. Trust me, it's for something special. 🌷
+        </p></b>
+
+        <div id="controls">
+
+            <button id="penButton" style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">Pen</button>
+            <button id="eraserButton" style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">Eraser</button>
+
+            <label style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">
+                Brush Size:
+                <input type="range" id="brushSize" min="1" max="20" value="3">
+            </label>
+
+            <button id="undoButton" style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">Undo</button>
+
+            <button id="redoButton" style="background-color:#FF8A97;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color:#6B0037">Redo</button>
+
+        </div>
+
+        <canvas id="drawingPad" width="300" height="400"></canvas>
+
+        <button id="nextButton" style="display:none ;">
+            Next
+        </button>
+
+    </div>
+
+    <!-- Bouquet Page -->
+    <div id="bouquetPage">
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif;
+       color:#6B0037" id="birthdayTitle">
+            Happy Birthday, Anne! 💗
+        </h1>
+
+  <h1 style="font-family:Arial, Helvetica, sans-serif;
+       color:#6B0037" id="bouquetTitle">
+             Here's our family bouquet! 💐
+        </h1>
+
+        <div id="bouquetContainer">
+<br><br>
+  <p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+    refresh if you wanna try again at your flower lol </p>
+
+           <canvas
+    id="bouquetCanvas"
+    width="430"
+    height="420">
+</canvas>
+
+   <br>
+<canvas
+    id="flowerCanvas"
+    width="400"
+    height="400">
+</canvas>
+<b>
+<p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+   Your pretty flower! </p></b>
+
+
+        </div>
+
+        <div id="downloadButtons">
+
+        <br>
+ <img id="" src="images/momsflower.PNG" alt="momsflower" style="height: 150px;width:110px">
+ <p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+   Mom's flower </p>
+
+ <img id="" src="images/dadsflower.PNG" alt="dadsflower" style="height: 150px;width:110px">
+ <p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+   Dad's flower </p>
+
+ <br>
+ <img id="" src="images/florsflower.PNG" alt="florsflower" style="height: 150px;width:110px">
+<p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+   Flor (the coolest's) flower</p>
+
+
+ <img id="" src="images/stevensflower.PNG" alt="stevensflower" style="height: 150px;width:110px">
+<p style="font-family:'Courier New', Courier, monospace;
+       color:#6B0037">
+   Steven's flower </p>
+
+
+        </div>
+<br><br>
+        <button id="cardButton">
+            Click me for one more thing...💌
+        </button>
+<br><br>
+    </div>
+
+<div id="cardPage" style="font-family:Arial, Helvetica, sans-serif;
+       color:#6B0037">
+    <h1>One Last Surprise... 💌</h1>
+
+    <div id="birthdayCard">
+
+        <!-- Front Cover -->
+        <div id="cardFront">
+
+            <b> <i> <h2 style="font-family:'Courier New', Courier, monospace">Open Me 🎂</h2> </b>
+
+            <p style="font-family:'Courier New', Courier, monospace">Click to open</p> </i>
+
+        </div>
+
+        <!-- Inside -->
+        <div id="cardInside">
+
+            <div id="leftPage">
+
+              <img id="" src="images/img1.jpg" alt="img1" style="height: 150px;width:110px">
+
+              <img id="" src="images/img2.jpg" alt="img2" style="height: 150px;width:110px">
+
+              <img id="" src="images/img3.jpg" alt="img3" style="height: 150px;width:110px">
+
+<img id="" src="images/birthday-happy-birthday.gif" alt="birthday" style="height: 130px;width:170px">
+
+            </div>
+
+            <div id="rightPage">
+
+                <h2 style="font-family:Georgia, 'Times New Roman', Times, serif"
+                >Happy Birthday Anne! 🎉</h2>
+
+                <p style="font-family:'Courier New', Courier, monospace; font-size:14px">
+                    Happy Birthday pretty sister! I hope you had the best day ever, the best vacay over in Oregon, and I wish you the best Chicago trip to come! I wish you meeting Ari becomes a reality, because you deserve it! You’re very hardworking, organized, and you’ve been the hugest role model to me above anybody else. I love waking up and watching the tiktoks u sent, and also listening to your dumb Starbucks stories on snap (they make me mad even though they aren’t happening to me lol). I wish we were there to celebrate with you! I love you so much and miss you sister 💗 -love, Flor
+                </p>
+
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+<br><br><br><br><br><br><br><br><br>
+<h2 style="font-family:'Courier New', Courier, monospace; font-size:14px">
+
+    Your b-day gift is complete. TY for opening it! 🌷
+</h2>
+
+<img id="" src="images/doink.gif" alt="doink" style="height: 150px;width:170px">
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

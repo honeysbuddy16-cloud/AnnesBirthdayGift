@@ -1,0 +1,365 @@
+/* ===== Entire webpage ===== */
+
+
+h1 {
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+}
+
+p {
+
+    font-size: clamp(1rem, 2.8vw, 1.25rem);
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+
+#welcomePage,
+#drawingPage,
+#bouquetPage {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    min-height: 100vh;
+
+ padding: 20px;
+
+    box-sizing: border-box;
+
+
+    text-align: center;
+
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+
+#welcomePage {
+    display: flex;
+}
+
+
+
+#drawingPage {
+    display: none;
+    opacity: 0;
+}
+
+/* ===== Drawing Controls ===== */
+
+#controls {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+/* ===== Canvas ===== */
+
+#drawingPad {
+
+    width:min(90vw,300px);
+    height:auto;
+    border: 2px solid black;
+    background-color: white;
+}
+
+
+/* ===== Buttons ===== */
+
+button {
+
+    padding: 14px 22px;
+
+    font-size: 18px;
+
+    max-width: 90vw;
+
+    cursor: pointer;
+
+}
+
+/* The slider track (the line) */
+#brushSize {
+    width: 150px;
+    appearance: none;
+    background: #ffbcd2;
+    height: 6px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* The draggable circle (thumb) */
+#brushSize::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: rgb(207, 48, 99);
+    /* Change this to any color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Optional: track when hovered */
+#brushSize:hover {
+    background: #bdbdbd;
+}
+
+#nextButton {
+    background-color: rgb(176, 80, 96);
+    color: white;
+}
+
+#bouquetPage {
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+#welcomePage {
+    display: flex;
+    opacity: 1;
+}
+
+#drawingPage,
+#bouquetPage {
+    display: none;
+    opacity: 0;
+}
+
+#bouquetTitle {
+    transition: opacity 0.8s ease;
+}
+
+#titleContainer {
+    position: relative;
+    height: 70px;
+}
+
+#birthdayTitle,
+#bouquetTitle {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+
+    transition: opacity 1s ease;
+}
+
+#birthdayTitle {
+    opacity: 1;
+}
+
+#bouquetTitle {
+    opacity: 0;
+}
+
+#titleContainer {
+    position: relative;
+    width: 100%;
+    height: 80px;      /* Reserve space for the headings */
+    margin-bottom: 25px;
+}
+
+#birthdayTitle,
+#bouquetTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    margin: 0;
+    text-align: center;
+
+    transition: opacity 1s ease;
+}
+
+#birthdayTitle {
+    opacity: 1;
+}
+
+#bouquetTitle {
+    opacity: 0;
+}
+
+#cardButton {
+    background-color: rgb(176, 80, 96);
+    color: white;
+
+}
+
+#flowerCanvas {
+    width: 170px;
+    height: 200px;
+}
+
+
+
+
+
+
+#cardPage {
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    text-align: center;
+}
+
+
+
+#card {
+    width: 650px;
+    max-width: 90%;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+#cardPage{
+    display:none;
+
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+
+
+
+#birthdayCard{
+
+    position:relative;
+
+    width: min(92vw, 700px);
+
+    aspect-ratio: 700 / 450;
+
+    height: auto;
+
+    perspective:2000px;
+
+}
+
+
+
+
+
+#cardFront{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background: white;
+
+    border-radius:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transform-origin:left;
+
+    transition:transform .8s ease;
+
+    z-index:2;
+
+}
+
+#cardFront {
+    background: #ffaabf;
+    border: 3px solid #8b004b;
+    border-radius: 20px;
+}
+
+#cardInside{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:white;
+
+    border-radius:15px;
+
+    display:flex;
+
+}
+
+
+
+#leftPage,
+#rightPage{
+
+    width:50%;
+
+    padding:30px;
+
+    box-sizing:border-box;
+
+}
+
+
+@media (max-width: 600px) {
+
+    #drawingPad {
+        width: 95vw;
+    }
+
+    #birthdayCard {
+        width: 95vw;
+    }
+
+    #bouquetCanvas {
+        width: 95vw;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+
+}
+
+
+#drawingPad {
+    touch-action: none;
+}
